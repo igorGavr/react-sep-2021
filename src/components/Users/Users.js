@@ -9,6 +9,7 @@ const Users = () => {
             .then(value => value.json())
             .then(value => setUsers(value))
     }, [])
+
     return (
         <div>
             {users.map(value => <User key={value.id} id={value.id} name={value.name} surname={value.surname} email={value.email} street={value.address.street} />)}
