@@ -8,6 +8,7 @@ import {
 import {Home} from "./pages/home/Home";
 import {Pokemons} from "./pages/pokemons/Pokemons";
 import {Pokemon} from "./pages/pokemon/Pokemon";
+import {Search} from "./pages/search/Search";
 
 function App() {
     return (
@@ -19,6 +20,9 @@ function App() {
                 <li>
                     <Link to={'/pokemons-page'}>pokemons</Link>
                 </li>
+                <li>
+                    <Link to={'/search'}>search pokemon</Link>
+                </li>
             </ul>
 
             <Routes>
@@ -26,6 +30,7 @@ function App() {
                 <Route path={'/pokemons-page'} element={<Pokemons/>}>
                     <Route path={'pokemon-details'} element={<Pokemon/>}/>
                 </Route>
+                <Route path={'/search'} element={<Search/>}/>
             </Routes>
 
         </div>

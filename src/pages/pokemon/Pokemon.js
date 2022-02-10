@@ -64,7 +64,7 @@ export function Pokemon() {
     return (
         <div>
             <h2>{name}</h2>
-            <img style={{width: 150}} src={pokemonForm?.sprites.front_default} alt=""/>
+            <img style={{width: 150}} src={pokemonForm?.sprites?.front_default} alt=""/>
 
         </div>
     );
