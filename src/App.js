@@ -1,16 +1,8 @@
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-    Link,
-    Outlet
-} from "react-router-dom";
+import {Link, Route, Routes} from "react-router-dom";
 import {HomePage} from "./pages/home-page/HomePage";
 import {UsersPage} from "./pages/users-page/UsersPage";
 import {CommentsPage} from "./pages/comments-page/CommentsPage";
 import {PostsPage} from "./pages/posts-page/PostsPage";
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
 
 function App() {
 

@@ -1,5 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
+import {fetchUsers} from "../../redux/users.actionCreator";
+
 
 export function UsersPage() {
 
@@ -7,18 +9,7 @@ export function UsersPage() {
 
     let dispatch = useDispatch();
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(value => value.json())
-            .then(value => {
-                dispatch({type: 'START_USER_LOADING'});
-                try {
-                    dispatch({type: 'LOAD_USERS', payload: value});
-                } catch (e) {
-                    console.log(e);
-                } finally {
-                    dispatch({type: 'END_USER_LOADING'});
-                }
-            });
+        dispatch(fetchUsers());
     }, []);
     return (
         <div>
