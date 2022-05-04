@@ -9,7 +9,7 @@ import {
 
 export function PokemonComponent(props) {
     let {item} = props; // props.item
-    console.log(item);
+    // console.log(item);
     return (
         <div className={'pokemon-card'}>
             {item.name}

@@ -58,7 +58,7 @@ export function Pokemon() {
 
     }, [url]);
 
-    console.log(url);
+    // console.log(url);
 
 
     return (

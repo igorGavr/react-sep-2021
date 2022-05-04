@@ -18,8 +18,9 @@ export function Pokemons() {
             setPokemons(results);
             setPagesCounter(Math.ceil(count / limit));
         });
-    }, [offset]);
 
+    }, [offset]);
+    console.log(pagesCounter)
     const pagesNumbersCreator = () => {
         let pageNumbers = []
         for (let i = 0; i < pagesCounter; i++) {
